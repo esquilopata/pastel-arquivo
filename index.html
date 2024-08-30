@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>área de trabalho </title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        header {
+            background-color: rgb(230, 107, 0);
+            padding: 10px;
+        }
+
+        .btn-abrir-sidenav {
+            font-size: 25px;
+            color: white;
+        }
+
+
+        nav{
+            height: 100%;
+            width: 0;
+            background-color: rgb(21, 4, 98);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+            transition:  0.3s;
+        }
+
+        nav a {
+            padding: 12px 10px 12px 32px;
+            font-size: 25px;
+            color: white;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: rgb(255, 255, 255);
+        }
+
+        main {
+            transition: margin-left 0.5s;
+            padding: 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            nav a {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <a href="#" class="btn-abrir-sidenav" onclick="abrirSidenav()">&#9776; abrir</a>
+    </header>
+    <nav id="sidenav">
+        <a href="#" onclick="fecharSidenav()">&times; fechar</a>
+        <a href="#" >Honme</a>
+        <a href="#" >Sobre</a>
+        <a href="#" >Contato</a>
+        <a href="#" >YouTube</a>
+    </nav>
+    <main id="main">
+        <h1>Exemplo de Sidenav</h1>
+        <p>Nesse local fica todo o conteúdo da página.</p>
+    </main>
+
+    <script>
+        function abrirSidenav() {
+            document.getElementById("sidenav").style.width= "250px";
+            document.getElementById("main").style.marginLeft = "250px"
+        }
+
+        function fecharSidenav() {
+            documento.getElementById("sidenav").style.width = "0";
+            documento.getElementById("main").style.marginLeft = "0"
+        }
+    </script>
+    <img src="Pastel do Rael.png">
+    </body>
+</body>
+</html>
